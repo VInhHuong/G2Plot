@@ -184,7 +184,7 @@ export function pieAnnotation(params: Params<PieOptions>): Params<PieOptions> {
   if (innerRadius && statistic) {
     let { title, content } = deepAssign({}, DEFAULT_OPTIONS.statistic, statistic);
     if (title !== false) {
-      title = deepAssign({}, { formatter: (datum) => (datum ? datum[colorField] : '总计') }, title);
+      title = deepAssign({}, { formatter: (datum) => (datum ? datum[colorField] : 'Tổng cộng') }, title);
     }
     if (content !== false) {
       content = deepAssign(
